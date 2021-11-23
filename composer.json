@@ -23,15 +23,14 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "evenement/evenement": "^3.0",
+        "php": "^8.0",
         "league/flysystem": "^1.1.4",
         "illuminate/bus": "^6.0|^7.0|^8.0",
         "illuminate/config": "^6.0|^7.0|^8.0",
         "illuminate/filesystem": "^6.0|^7.0|^8.0",
         "illuminate/log": "^6.0|^7.0|^8.0",
         "illuminate/support": "^6.0|^7.0|^8.0",
-        "php-ffmpeg/php-ffmpeg": "^0.18.0"
+        "protonemedia/php-ffmpeg": "^1.0"
     },
     "require-dev": {
         "league/flysystem-memory": "^1.0",
