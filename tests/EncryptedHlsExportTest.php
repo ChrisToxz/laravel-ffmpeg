@@ -14,8 +14,6 @@ use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
  */
 class EncryptedHlsExportTest extends TestCase
 {
-    use RetryTrait;
-
     public static function keyLinePattern($key = null)
     {
         return '#EXT-X-KEY:METHOD=AES-128,URI="' . ($key ?: '[~a-zA-Z0-9-_\/:]+.key') . '",IV=[a-z0-9]+';
@@ -23,7 +21,6 @@ class EncryptedHlsExportTest extends TestCase
 
     /**
      * @test
-     * @retry 5
      */
     public function it_can_export_a_single_media_file_into_an_encryped_hls_export()
     {
@@ -68,7 +65,6 @@ class EncryptedHlsExportTest extends TestCase
 
     /**
      * @test
-     * @retry 5
      */
     public function it_can_export_a_single_media_file_twice_into_an_encryped_hls_export()
     {
@@ -97,7 +93,6 @@ class EncryptedHlsExportTest extends TestCase
 
     /**
      * @test
-     * @retry 5
      */
     public function it_can_export_a_single_media_file_into_an_encryped_hls_export_with_rotating_keys()
     {
@@ -146,7 +141,6 @@ class EncryptedHlsExportTest extends TestCase
 
     /**
      * @test
-     * @retry 5
      */
     public function it_can_set_the_numbers_of_segments_per_key()
     {
